@@ -4,7 +4,7 @@
   users.users.connor = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "audio" ];
-    hashedPassword = "$6$5x5zl6Ztze5VTi$IY/9vKrnemcmNWqDU/K1hLCiLfjnNPRS3NEyN/u/nuI61RIT3Kk4Zq6hI20TSBOPSAPgU6/Tgnp/hjb6HJCZq.";
+    hashedPassword = "$6$6qBpPC2kI68$li2HISZ2VJwK6BHF1htqCvKABKU5QLQAUEySYITKWW85K6B81S6ZwAEkjyRp8zraPDgPhzLsZ0GCkKFL/JnPv0";
 
     packages = with pkgs; [
       firefox

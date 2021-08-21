@@ -43,7 +43,7 @@ in
 
   services.xserver = {
     enable = true;
-    layout = "uk"; # Set the keyboard layout.
+    layout = "gb"; # Set the keyboard layout.
     desktopManager.plasma5.enable = true;
     displayManager.sddm.enable = true;
   };

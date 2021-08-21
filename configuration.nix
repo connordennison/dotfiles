@@ -13,14 +13,14 @@ in
     (import "${home-manager}/nixos")      # Include Home Managers NixOS package.
     /etc/nixos/hardware-configuration.nix # Include the automatic hardware scan results.
     
-    ./users/kognise.nix # Include user-specific configuration for kognise.
+    ./users/connor.nix # Include user-specific configuration for connor.
     ./installation.nix  # Include configuration specific to this installation.
   ];
 
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_GB.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "us";
+    keyMap = "uk";
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -43,19 +43,10 @@ in
 
   services.xserver = {
     enable = true;
-    layout = "us"; # Set the keyboard layout.
+    layout = "uk"; # Set the keyboard layout.
     desktopManager.plasma5.enable = true;
     displayManager.sddm.enable = true;
   };
-
-  services.printing.enable = true;
-  services.printing.drivers = with pkgs; [
-    gutenprint
-    gutenprintBin
-    brlaser
-    brgenml1lpr
-    brgenml1cupswrapper
-  ];
 
   sound.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull;

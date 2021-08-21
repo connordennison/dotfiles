@@ -1,16 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  users.users.kognise = {
+  users.users.connor = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "audio" ];
-    hashedPassword = "$6$Xbkutbcm1G8$P.OVMoq/1eKU48ZSwOL8FIOfdojyRBNag6vxc2vMjr1IAOqjMhb0GVODxCK9ZbXgIfhGaD2rs8PNIW3xXFYeP0";
+    hashedPassword = "$6$5x5zl6Ztze5VTi$IY/9vKrnemcmNWqDU/K1hLCiLfjnNPRS3NEyN/u/nuI61RIT3Kk4Zq6hI20TSBOPSAPgU6/Tgnp/hjb6HJCZq.";
 
     packages = with pkgs; [
-      brave
+      firefox
       discord
-      _1password-gui
-      spotify
       libreoffice
       kate
       neofetch
@@ -24,7 +22,6 @@
       ark
       obsidian
       gwenview
-      zoom-us
 
       # Theoretically required for VSCode
       desktop-file-utils
@@ -33,7 +30,7 @@
     ];
   };
 
-  home-manager.users.kognise = {
+  home-manager.users.connor = {
     home.sessionVariables.GIT_YOINK_ROOT = "~/Documents/Programming/";
 
     programs.bash = {
@@ -49,12 +46,12 @@
 
     programs.git = {
       enable = true;
-      userName = "Kognise";
-      userEmail = "felix.mattick@gmail.com";
+      userName = "connor";
+      userEmail = "me@cnnd.co.uk";
       extraConfig = {
         init.defaultBranch = "main";
-        user.signingkey = "A31F2D671B0B30E87780DFED7CD21A030279F00B";
-        commit.gpgsign = true;
+        # user.signingkey = "";
+        # commit.gpgsign = true;
       };
       aliases.get = "!npx git-yoink";
     };

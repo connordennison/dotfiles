@@ -7,8 +7,7 @@
   networking.hostName = "nixos";
   time.timeZone = "Europe/London";
 
-  # services.xserver.videoDrivers = [ "" ];
-  virtualisation.vmware.guest.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

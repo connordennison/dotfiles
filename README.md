@@ -1,6 +1,6 @@
-# kognise/dotfiles
+# connordennison/dotfiles
 
-My NixOS config, quite fresh so not that fancy.
+A fork of [kognise's dotfiles](https://github.com/kognise/dotfiles) with (a few) modifications to tailor it to me.
 
 ### Install
 

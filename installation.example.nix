@@ -3,8 +3,21 @@
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    useOSProber = true;
+    efiSupport = true;
+    device = "nodev";
+    fsIdentifier = "label";
+  };
 
-  networking.hostName = "nixos";
+  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
+  # Per-interface useDHCP will be mandatory in the future, so this generated config
+  # replicates the default behaviour.
+  networking.useDHCP = false;
+  networking.interfaces.CHANGEME.useDHCP = true;
+
+  networking.hostName = "connor-nixos";
   time.timeZone = "Europe/London";
 
   services.xserver.videoDrivers = [ "nvidia" ];

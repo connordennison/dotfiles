@@ -14,7 +14,6 @@
       neofetch
       nodejs
       yarn
-      git
       vscode
       alacritty
       starship

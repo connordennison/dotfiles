@@ -32,6 +32,9 @@ in
     libnotify
     file
     jq
+    git
+    libwacom
+    clang
   ];
 
   programs.gnupg.agent = {
